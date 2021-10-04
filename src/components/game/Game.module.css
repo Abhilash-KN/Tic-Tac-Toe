@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.moveInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+}
+
+.board {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.row:nth-child(3) {
+  border-bottom: none;
+}
+
+.col {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 3px solid gray;
+  border-bottom: 3px solid gray;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.row:nth-child(3) .col {
+  border-bottom: none;
+}
+
+.col:nth-child(3) {
+  border-right: none;
+}
+
+.button {
+  margin-top: 8px;
+}
