@@ -28,6 +28,7 @@ function PlayAsX(props) {
       if (strike) setStrike(strike);
       if (winner !== "p") {
         setInProgress(false);
+        setPaused(false);
       } else {
         setTimeout(() => {
           let move = findBestMove(tempGrid, nextTurn, 1)[0];

@@ -69,12 +69,14 @@ function Game(props) {
     <div className={styles.container}>
       <div className={styles.moveInfo}>{currentTurn.toUpperCase()} turn</div>
       <div className={styles.board}>{gameGrid}</div>
-      <button className={styles.button} onClick={() => quitGame()}>
-        Quit
-      </button>
-      <button className={styles.button} onClick={() => restartGame()}>
-        Restart
-      </button>
+      <div className={styles.options}>
+        <button className={styles.button} onClick={() => quitGame()}>
+          Quit
+        </button>
+        <button className={styles.button} onClick={() => restartGame()}>
+          Restart
+        </button>
+      </div>
     </div>
   );
 }

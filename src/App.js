@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AnimatedBackground from "components/animation/AnimatedBackground";
 import Game from "components/game/Game";
 import Menu from "components/menu/Menu";
 import styles from "App.module.css";
@@ -15,7 +14,6 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <AnimatedBackground />
       {page === "menu" ? (
         <Menu setPage={setPage} setTurn={setTurn} />
       ) : (
