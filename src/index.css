@@ -1,9 +1,17 @@
 :root {
-  --gridLinesColor: rgb(167, 167, 167, 0.4);
+  --gridLinesColor: #303179a8;
+  --buttonColor: #437a37;
+  --buttonTextColor: white;
+  --innerContainerBackgroundColor: #ffffffd0;
+  --innerContainerBoxShadow: rgba(50, 50, 93, 0.7) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.6) 0px -2px 15px 0px inset;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.2s;
 }

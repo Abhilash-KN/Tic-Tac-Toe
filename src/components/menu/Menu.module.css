@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   height: 396px;
   width: 72%;
   min-width: 220px;
@@ -6,9 +7,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-color: var(--innerContainerBackgroundColor);
+  box-shadow: var(--innerContainerBoxShadow);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -16,8 +16,14 @@
   height: 40px;
   margin: 12px 36px 0;
   border: none;
-  background: none;
+  font-size: 1.08em;
+  background: var(--buttonColor);
+  color: var(--buttonTextColor);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
-    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em;
+}
+
+.container .button:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0.12em 0.15em,
+    rgba(0, 0, 0, 0.5) 0px 0.125em 0.5em;
 }

@@ -12,6 +12,7 @@ function PlayAsO(props) {
     inProgress,
     setStrike,
     setInProgress,
+    newGame,
   } = props;
 
   const [paused, setPaused] = useState(false);
@@ -36,7 +37,8 @@ function PlayAsO(props) {
         setPaused(false);
       }, 500);
     }, 500);
-  }, []);
+    // eslint-disable-next-line
+  }, [newGame]);
 
   function makeMove(i, j) {
     if (grid[i][j] === " " && inProgress && !paused) {
@@ -79,11 +81,20 @@ function PlayAsO(props) {
         <div className={styles.row} key={rowIndex}>
           {row.map((col, colIndex) => (
             <div
+              style={{ color: col === "x" ? "#6474e5" : "#f13619" }}
               className={styles.col}
               key={colIndex}
               onClick={() => makeMove(rowIndex, colIndex)}
             >
-              {col.toUpperCase()}
+              {col === "x" ? (
+                <span>&#10006;</span>
+              ) : col === "o" ? (
+                <span style={{ fontSize: "0.76em", fontWeight: "bolder" }}>
+                  &#9711;
+                </span>
+              ) : (
+                " "
+              )}
             </div>
           ))}
         </div>

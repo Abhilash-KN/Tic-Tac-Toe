@@ -1,9 +1,127 @@
+:root {
+  --animationDuration: 12s;
+
+  --icon1: 12%;
+  --icon2: 23%;
+  --icon3: 35%;
+  --icon4: 44%;
+  --icon5: 54%;
+  --icon6: 63%;
+  --icon7: 70%;
+  --icon8: 80%;
+  --icon9: 90%;
+
+  --icon1Width: 100px;
+  --icon2Width: 60px;
+  --icon3Width: 80px;
+  --icon4Width: 45px;
+  --icon5Width: 140px;
+  --icon6Width: 50px;
+  --icon7Width: 90px;
+  --icon8Width: 50px;
+  --icon9Width: 100px;
+
+  --icon1Delay: calc(var(--animationDuration) * 0.3 - 2s);
+  --icon2Delay: calc(var(--animationDuration) * 0.54 - 2s);
+  --icon3Delay: calc(var(--animationDuration) * 0.24 - 2s);
+  --icon4Delay: calc(var(--animationDuration) * 0.76 - 2s);
+  --icon5Delay: calc(var(--animationDuration) * 0.4 - 2s);
+  --icon6Delay: calc(var(--animationDuration) * 0.6 - 2s);
+  --icon7Delay: calc(var(--animationDuration) * 0.1 - 2s);
+  --icon8Delay: calc(var(--animationDuration) * 0.8 - 2s);
+  --icon9Delay: calc(var(--animationDuration) * 0.5 - 2s);
+}
+
 .container {
   position: absolute;
   height: 100%;
   width: 100%;
-  /* background-color: green; */
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    #97b360,
+    #c5d7d7
+  );
+
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.animatedBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  min-height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animatedBg .image {
+  position: absolute;
+  width: 100px;
+  opacity: 0.4;
+  top: -140px;
+  animation: moveIcons linear var(--animationDuration) infinite;
+}
+
+.animatedBg .image img {
+  width: 100%;
+}
+
+.image:nth-child(1) {
+  width: var(--icon1Width);
+  left: calc(var(--icon1) - (var(--icon1Width) / 2));
+  animation-delay: var(--icon1Delay);
+}
+.image:nth-child(2) {
+  width: var(--icon2Width);
+  left: calc(var(--icon2) - (var(--icon2Width) / 2));
+  animation-delay: var(--icon2Delay);
+}
+.image:nth-child(3) {
+  width: var(--icon3Width);
+  left: calc(var(--icon3) - (var(--icon3Width) / 2));
+  animation-delay: var(--icon3Delay);
+}
+.image:nth-child(4) {
+  width: var(--icon4Width);
+  left: calc(var(--icon4) - (var(--icon4Width) / 2));
+  animation-delay: var(--icon4Delay);
+}
+.image:nth-child(5) {
+  width: var(--icon5Width);
+  left: calc(var(--icon5) - (var(--icon5Width) / 2));
+  animation-delay: var(--icon5Delay);
+}
+.image:nth-child(6) {
+  width: var(--icon6Width);
+  left: calc(var(--icon6) - (var(--icon6Width) / 2));
+  animation-delay: var(--icon6Delay);
+}
+.image:nth-child(7) {
+  width: var(--icon7Width);
+  left: calc(var(--icon7) - (var(--icon7Width) / 2));
+  animation-delay: var(--icon7Delay);
+}
+.image:nth-child(8) {
+  width: var(--icon8Width);
+  left: calc(var(--icon8) - (var(--icon8Width) / 2));
+  animation-delay: var(--icon8Delay);
+}
+.image:nth-child(9) {
+  width: var(--icon9Width);
+  left: calc(var(--icon9) - (var(--icon9Width) / 2));
+  animation-delay: var(--icon9Delay);
+}
+
+@keyframes moveIcons {
+  0% {
+    transform: translateY(0vh) rotate(0);
+  }
+  100% {
+    transform: translateY(calc(100vh + 200px)) rotate(360deg);
+  }
 }
